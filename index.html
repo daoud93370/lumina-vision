@@ -1,190 +1,201 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMINA Vision - Lunettes & Équipements Optiques</title>
-    <!-- Description de 360 caractères -->
-    <meta name="description" content="LUMINA Vision redéfinit votre style avec une sélection exclusive de lunettes de haute qualité. Découvrez nos 4 univers adaptés à vos besoins : Solaire Chic (14,99 €), Cyclisme & Sport (24,99 €), Masques Moto/Ski (29,99 €) et Natation (9,99 €). Élégance, protection UV et performance au meilleur prix. Trouvez la paire idéale et commandez facilement !">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        header {
-            background: var(--dark);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 2px;
-        }
-        header p {
-            max-width: 600px;
-            margin: 0 auto;
-            color: #94a3b8;
-            font-size: 0.95rem;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1.5rem;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-        .category-tag {
-            font-size: 0.8rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-        .price {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 0.75rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background: #1d4ed8;
-        }
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINA Vision - Lunettes & Équipements Optiques</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--dark);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background-color: #e2e8f0;
+    }
+    .card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--gray);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+    .price {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      margin-top: auto;
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 0.6rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>LUMINA Vision</h1>
-        <p>LUMINA Vision redéfinit votre style avec une sélection exclusive de lunettes de haute qualité. Découvrez nos 4 univers : Solaire Chic, Cyclisme & Sport, Masques Moto/Ski et Natation.</p>
-    </header>
+  <header>
+    <h1>LUMINA Vision</h1>
+    <p>Redéfinissez votre style avec une sélection exclusive de lunettes de haute qualité.</p>
+  </header>
 
-    <div class="container">
-        <h2 class="section-title">Notre Catalogue (25 Produits)</h2>
-        
-        <div class="grid" id="product-grid">
-            <!-- Les 25 produits générés dynamiquement ou statiquement -->
-            <script>
-                const products = [
-                    // Solaire Chic (14.99 €)
-                    {name: "Lunettes Solaire Eclipse", cat: "Solaire Chic", price: "14,99 €"},
-                    {name: "Lunettes Solaire Nova", cat: "Solaire Chic", price: "14,99 €"},
-                    {name: "Lunettes Solaire Aura", cat: "Solaire Chic", price: "14,99 €"},
-                    {name: "Lunettes Solaire Solstice", cat: "Solaire Chic", price: "14,99 €"},
-                    {name: "Lunettes Solaire Horizon", cat: "Solaire Chic", price: "14,99 €"},
-                    {name: "Lunettes Solaire Zenith", cat: "Solaire Chic", price: "14,99 €"},
-                    {name: "Lunettes Solaire Mirage", cat: "Solaire Chic", price: "14,99 €"},
+  <div class="container">
+    <h2 class="section-title">Notre Catalogue (25 Produits)</h2>
+    <div class="grid" id="catalog"></div>
+  </div>
 
-                    // Cyclisme & Sport (24.99 €)
-                    {name: "Sport Aero Velocity", cat: "Cyclisme & Sport", price: "24,99 €"},
-                    {name: "Sport Aero Rush", cat: "Cyclisme & Sport", price: "24,99 €"},
-                    {name: "Sport Aero Titan", cat: "Cyclisme & Sport", price: "24,99 €"},
-                    {name: "Sport Aero Apex", cat: "Cyclisme & Sport", price: "24,99 €"},
-                    {name: "Sport Aero Pulse", cat: "Cyclisme & Sport", price: "24,99 €"},
-                    {name: "Sport Aero Strike", cat: "Cyclisme & Sport", price: "24,99 €"},
+  <footer>
+    <p>&copy; 2026 LUMINA Vision - Tous droits réservés.</p>
+  </footer>
 
-                    // Masques Moto/Ski (29.99 €)
-                    {name: "Masque Blizzard Pro", cat: "Masques Moto / Ski", price: "29,99 €"},
-                    {name: "Masque Summit Extreme", cat: "Masques Moto / Ski", price: "29,99 €"},
-                    {name: "Masque Glacier Shield", cat: "Masques Moto / Ski", price: "29,99 €"},
-                    {name: "Masque Ride Armor", cat: "Masques Moto / Ski", price: "29,99 €"},
-                    {name: "Masque Frost Viper", cat: "Masques Moto / Ski", price: "29,99 €"},
-                    {name: "Masque Trail Beast", cat: "Masques Moto / Ski", price: "29,99 €"},
+  <script>
+    const products = [
+      { name: "Lunettes Solaire Eclipse", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Lunettes Solaire Nova", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Lunettes Solaire Aura", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Lunettes Solaire Solstice", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Lunettes Solaire Horizon", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Lunettes Solaire Zenith", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Lunettes Solaire Mirage", cat: "Solaire Chic", price: "14,99 €" },
+      { name: "Sport Aero Velocity", cat: "Cyclisme & Sport", price: "24,99 €" },
+      { name: "Sport Aero Rush", cat: "Cyclisme & Sport", price: "24,99 €" },
+      { name: "Sport Aero Titan", cat: "Cyclisme & Sport", price: "24,99 €" },
+      { name: "Sport Aero Apex", cat: "Cyclisme & Sport", price: "24,99 €" },
+      { name: "Sport Aero Pulse", cat: "Cyclisme & Sport", price: "24,99 €" },
+      { name: "Sport Aero Strike", cat: "Cyclisme & Sport", price: "24,99 €" },
+      { name: "Masque Blizzard Pro", cat: "Masques Moto / Ski", price: "29,99 €" },
+      { name: "Masque Summit Extreme", cat: "Masques Moto / Ski", price: "29,99 €" },
+      { name: "Masque Glacier Shield", cat: "Masques Moto / Ski", price: "29,99 €" },
+      { name: "Masque Ride Armor", cat: "Masques Moto / Ski", price: "29,99 €" },
+      { name: "Masque Frost Viper", cat: "Masques Moto / Ski", price: "29,99 €" },
+      { name: "Masque Trail Beast", cat: "Masques Moto / Ski", price: "29,99 €" },
+      { name: "Natation Aqua Clear", cat: "Piscine & Natation", price: "9,99 €" },
+      { name: "Natation Hydro Glide", cat: "Piscine & Natation", price: "9,99 €" },
+      { name: "Natation Blue Wave", cat: "Piscine & Natation", price: "9,99 €" },
+      { name: "Natation Deep Dive", cat: "Piscine & Natation", price: "9,99 €" },
+      { name: "Natation Neptun Pro", cat: "Piscine & Natation", price: "9,99 €" },
+      { name: "Natation Coral Vision", cat: "Piscine & Natation", price: "9,99 €" }
+    ];
 
-                    // Piscine & Natation (9.99 €)
-                    {name: "Natation Aqua Clear", cat: "Piscine & Natation", price: "9,99 €"},
-                    {name: "Natation Hydro Glide", cat: "Piscine & Natation", price: "9,99 €"},
-                    {name: "Natation Blue Wave", cat: "Piscine & Natation", price: "9,99 €"},
-                    {name: "Natation Deep Dive", cat: "Piscine & Natation", price: "9,99 €"},
-                    {name: "Natation Neptun Pro", cat: "Piscine & Natation", price: "9,99 €"},
-                    {name: "Natation Coral Vision", cat: "Piscine & Natation", price: "9,99 €"}
-                ];
+    const catalog = document.getElementById('catalog');
 
-                const grid = document.getElementById('product-grid');
-                products.forEach(p => {
-                    grid.innerHTML += `
-                        <div class="card">
-                            <div>
-                                <span class="category-tag">${p.cat}</span>
-                                <h3>${p.name}</h3>
-                            </div>
-                            <div>
-                                <div class="price">${p.price}</div>
-                                <a href="#" class="btn">Commander</a>
-                            </div>
-                        </div>
-                    `;
-                });
-            </script>
-        </div>
-    </div>
+    // Récupère automatiquement les fichiers du dépôt
+    fetch('https://api.github.com/repos/daoud93370/lumina-vision/contents/')
+      .then(res => res.json())
+      .then(files => {
+        // Filtrer les images .jpeg, .jpg, .png
+        const imageFiles = files
+          .filter(f => f.name.match(/\.(jpe?g|png)$/i))
+          .map(f => f.name);
 
-    <footer>
-        <p>&copy; 2026 LUMINA Vision - Tous droits réservés.</p>
-    </footer>
+        products.forEach((product, index) => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          
+          // Utilise l'image correspondante dans la liste
+          const imgSrc = imageFiles[index] ? imageFiles[index] : 'https://via.placeholder.com/300x200?text=LUMINA+Vision';
 
+          card.innerHTML = `
+            <img class="card-img" src="${imgSrc}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x200?text=LUMINA+Vision'">
+            <div class="card-body">
+              <span class="category">${product.cat}</span>
+              <h3 class="product-name">${product.name}</h3>
+              <div class="price">${product.price}</div>
+              <a href="#" class="btn">Commander</a>
+            </div>
+          `;
+          catalog.appendChild(card);
+        });
+      });
+  </script>
 </body>
 </html>
